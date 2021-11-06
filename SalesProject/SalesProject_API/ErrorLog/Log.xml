@@ -1,0 +1,59 @@
+<?xml version="1.0" standalone="yes"?>
+<Mawaqaa-Tracking>
+  <Counts>
+    <Count ErrCount="1" />
+  </Counts>
+  <Error>
+    <ErrID>0</ErrID>
+    <ErrDate>06/11/2021 15:58</ErrDate>
+    <UserID />
+    <UserType>0</UserType>
+    <ErrPage>{
+    "APIKey":"123456",
+    "LanguageID":1,
+     "oOrdersModel":{
+        "CustomerID":1,
+        "DiscountAmount":0,
+        "ServiceCharge":2,
+        "OrderNotes":"test",
+        "PostedDate":"10/14/2021",
+        "lstOrderDetails" :
+        [
+            {
+                "ProductID":1,
+                "Qty":2
+            },
+            {
+                "ProductID":2,
+                "Qty":3
+            }
+        ]
+        
+    }
+}</ErrPage>
+    <Msg>An error occurred while updating the entries. See the inner exception for details.; Inner Exception: An error occurred while updating the entries. See the inner exception for details.; Inner Exception: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.MW_OrdersDetails_dbo.MW_Orders_OrderID". The conflict occurred in database "SalesDB2", table "dbo.MW_Orders", column 'ID'.
+The statement has been terminated.</Msg>
+    <Trace>   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at SalesProject.Models.Modules.Orders.OrdersCOM.SaveOrder(OrdersModel oModel, Int32 LanguageID) in D:\SalesProject\SalesProject\SalesProject\Models\Modules\Orders\OrdersCOM.cs:line 201
+   at SalesProject_API.Models.APIs.OrdersAPI.OrdersAPI.SaveOrder(OrdersRequestAPI ordersRequestAPI) in D:\SalesProject\SalesProject\SalesProject_API\Models\APIs\OrdersAPI\OrdersAPI.cs:line 63
+   at SalesProject_API.Controllers.ServicesController.&lt;SaveOrder&gt;d__16.MoveNext() in D:\SalesProject\SalesProject\SalesProject_API\Controllers\ServicesController.cs:line 326
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.&lt;CastToObject&gt;d__1`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.&lt;InvokeActionAsyncCore&gt;d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.&lt;ExecuteAsync&gt;d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.&lt;ExecuteAsync&gt;d__6.MoveNext()</Trace>
+  </Error>
+</Mawaqaa-Tracking>
